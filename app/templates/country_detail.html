@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+{% block title %}{{title}} {%endblock title %}
+
+{% block body %}
+<section id="section-detail">
+	<div class="container-fluid">
+		<div class="container">
+			<div class="jumbotron">
+				<h3>{{country.name}}</h3>
+			</div>
+			<div class="row" >
+				<div class="col-3">
+					<div class="card shadow-lg p-3 mb-5 bg-white rounded" >
+						<div class="card-body">
+							<h2>Infected</h2>
+							<h3>
+								<span class="badge badge-warning">{{country.infected}}</span>
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="card shadow-lg p-3 mb-5 bg-white rounded">
+						<div class="card-body">
+							<h2>Deaths</h2>
+							<h3>
+								<span class="badge badge-danger">{{country.deaths}}</span>
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="card shadow-lg p-3 mb-5 bg-white rounded">
+						<div class="card-body">
+							<h2>Recovered</h2>
+							<h3>
+								<span class="badge badge-success">{{country.recovered}}</span>
+								</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="card shadow-lg p-3 mb-5 bg-white rounded">
+						<div class="card-body">
+							<h2>Active</h2>
+							<h3>
+								<span class="badge badge-info">{{country.active}}</span>
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="info">
+	<div class="container">
+		<div class="row" style="margin-bottom: 10px;">
+			
+				<div class="row" style="text-align: left;">
+					<div class="col-12">
+						<div class="card shadow-lg p-3 mb-5 bg-white rounded">
+							<div class="row">
+								<div class="col-12">
+									<div class="">
+										<h4>Be careful with meetings and travel</h4>
+										<div class="card-body">
+											<ul>
+												<li>Use videoconferencing for meetings when possible</li>
+												<li>When not possible, hold meetings in open, well-ventilated spaces</li>
+												<li>Consider adjusting or postponing large meetings or gatherings</li>
+												<li>Assess the risks of business travel</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="card shadow-lg p-3 mb-5 bg-white rounded">
+							<div class="row">
+								<div class="col-12">
+									<div class="">
+										<h4>Practice good hygiene</h4>
+										<div class="card-body">
+											<li>Stop handshaking – use other noncontact methods of greeting</li>
+											<li>Clean hands at the door and schedule regular hand washing reminders by email</li>
+											<li>Create habits and reminders to avoid touching their faces and cover coughs and sneezes</li>
+											<li>Disinfect surfaces like doorknobs, tables, desks, and handrails regularly</li>
+											<li>Increase ventilation by opening windows or adjusting air conditioning</li>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="card shadow-lg p-3 mb-5 bg-white rounded">
+							<div class="row">
+								<div class="col-12">
+									<div class="">
+										<h4>Handle food carefully</h4>
+										<div class="card-body">
+											<ul>
+												<li>Limit food sharing</li>
+												<li>Strengthen health screening for cafeteria staff and their close contacts</li>
+												<li>Ensure cafeteria staff and their close contacts practice strict hygiene</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			
+			
+		</div>	
+	</div>
+</section>
+{% endblock body%}
+

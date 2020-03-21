@@ -1,0 +1,204 @@
+{% extends 'base.html' %}
+
+{% block title %}{{title}} {%endblock title %}
+
+{% block body %}
+<section id="section-fight-corona" >
+    <div class="container-fluid">
+		<div class="container" style="margin-top: 30px;">
+			<div class="" style="padding-top: 50px;text-align: center;">
+				<h3>World stats</h3>
+			</div>
+			<div class="row" >
+				<div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+					<div class="card shadow-lg p-3 mb-5 bg-white rounded" >
+						<div class="card-body" style="text-align: center;">
+							<h2>Infected</h2>
+							<h3>
+								<span class="badge badge-warning">{{total_infected}}</span>
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+					<div class="card shadow-lg p-3 mb-5 bg-white rounded">
+						<div class="card-body" style="text-align: center;">
+							<h2>Deaths</h2>
+							<h3>
+								<span class="badge badge-danger">{{total_deaths}}</span>
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+					<div class="card shadow-lg p-3 mb-5 bg-white rounded">
+						<div class="card-body" style="text-align: center;">
+							<h2>Recovered</h2>
+							<h3>
+								<span class="badge badge-success">{{total_recovered}}</span>
+								</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+					<div class="card shadow-lg p-3 mb-5 bg-white rounded">
+						<div class="card-body" style="text-align: center;">
+							<h2>Active</h2>
+							<h3>
+								<span class="badge badge-info">{{total_active}}</span>
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row" >
+				<div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+					<div class="card shadow-lg p-3 mb-5 bg-white rounded" >
+						<div class="card-body" style="text-align: center;">
+							<h2>Infections today</h2>
+							<h3>
+								<span class="badge badge-warning">0</span>
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+					<div class="card shadow-lg p-3 mb-5 bg-white rounded">
+						<div class="card-body" style="text-align: center;">
+							<h2>Deaths today</h2>
+							<h3>
+								<span class="badge badge-danger">0</span>
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+					<div class="card shadow-lg p-3 mb-5 bg-white rounded">
+						<div class="card-body" style="text-align: center;">
+							<h2>Recovered today</h2>
+							<h3>
+								<span class="badge badge-success">0</span>
+								</h3>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+	<section id="section-bottom">
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<table class="table table-striped table-light">
+						<thead>
+						  <tr>
+							<th scope="col">Country</th>
+							<th scope="col">Infected</th>
+							<th scope="col">Deaths</th>
+							<th scope="col">Recovered</th>
+							<th scope="col">Active</th>
+						  </tr>
+						</thead>
+						<tbody>
+							{% for country in first_half %}
+							<a href="">
+								<tr>
+									<td>{{country.name}}</td>
+									<td class="text text-warning">{{country.infected}}</td>
+									<td class="text text-danger">{{country.deaths}}</td>
+									<td class="text text-success">{{country.recovered}}</td>
+									<td class="text text-info">{{country.active}}</td>
+								  </tr>
+							</a>
+							{% endfor%}
+						 
+					  </table>
+				</div>
+				<div class="col-6 ">
+					<table class="table table-striped table-light">
+						<thead>
+						  <tr>
+							<th scope="col">Country</th>
+							<th scope="col">Infected</th>
+							<th scope="col">Deaths</th>
+							<th scope="col">Recovered</th>
+							<th scope="col">Active</th>
+						  </tr>
+						</thead>
+						<tbody>
+							{% for country in second_half %}
+							<a href="">
+								<tr>
+									<td>{{country.name}}</td>
+									<td class="text text-warning">{{country.infected}}</td>
+									<td class="text text-danger">{{country.deaths}}</td>
+									<td class="text text-success">{{country.recovered}}</td>
+									<td class="text text-info">{{country.active}}</td>
+								  </tr>
+							</a>
+							{% endfor%}
+						 
+					  </table>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class='container-fluid'>
+		<div class="" style="padding-top: 20px;padding-left:20px;padding-right:20px">
+				<h3 style="text-align: center">A statement from WHO</h3>
+				<div class="row">
+					<div class="col-6">
+						<div class="card shadow-lg p-3 mb-5 bg-white rounded" style="margin-bottom: 20px">
+							<div class="card-body">
+								<p class="card-text">
+									Coronaviruses (CoV) are a large family of viruses that cause illness ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS-CoV) and Severe Acute Respiratory Syndrome (SARS-CoV).
+									Coronavirus disease (COVID-19) is a new strain that was discovered in 2019 and has not been previously identified in humans.
+									
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="card shadow-lg p-3 mb-5 bg-white rounded">
+							<div class="card-body">
+								<p class="card-text">
+									Coronaviruses are zoonotic, meaning they are transmitted between animals and people.  Detailed investigations found that SARS-CoV was transmitted from civet cats to humans and MERS-CoV from dromedary camels to humans. Several known coronaviruses are circulating in animals that have not yet infected humans. 
+								</p>	
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="col-6">
+						<div class="card shadow-lg p-3 mb-5 bg-white rounded" style="margin-bottom: 2px">
+							<div class="card-body">
+								<p class="card-text">
+									Common signs of infection include respiratory symptoms, fever, cough, shortness of breath and breathing difficulties. In more severe cases, infection can cause pneumonia, severe acute respiratory syndrome, kidney failure and even death. 
+									Standard recommendations to prevent infection spread include regular hand washing, covering mouth and nose when coughing and sneezing, thoroughly cooking meat and eggs. Avoid close contact with anyone showing symptoms of respiratory illness such as coughing and sneezing.
+									Common signs of infection include respiratory symptoms, fever, cough, shortness of breath and breathing difficulties. In more severe 
+								</p>
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="card shadow-lg p-3 mb-5 bg-white rounded">
+							<div class="card-body">
+								<p class="card-text">
+									cases, infection can cause pneumonia, severe acute respiratory syndrome, kidney failure and even death. 
+									Standard recommendations to prevent infection spread include regular hand washing, covering mouth and nose when coughing and sneezing, thoroughly cooking meat and eggs. Avoid close contact with anyone showing symptoms of respiratory illness such as coughing and sneezing.
+									Common signs of infection include respiratory symptoms, fever, cough, shortness of breath and breathing difficulties. In more severe cases, infection can cause pneumonia, severe acute respiratory syndrome, kidney failure and even death. 
+									ughly cooking meat and eggs. Avoid close contact with anyone showing symptoms of respiratory illness such as coughing and sneezing.
+								</p>	
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+	</div>
+</section>
+{% endblock body %}
