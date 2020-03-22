@@ -26,41 +26,25 @@
       <!-- <li class="nav-item active">
         <a class="nav-link" href="{{url_for('index')}}">Home <span class="sr-only">(current)</span></a>
       </li> -->
-     <!--  <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('fight_corona')}}">View table</a>
+      </li>
+    
      
-      <!-- <span id="report" style="justify-content: center">
-         <button type="button" class="btn btn-warning">
-      Infected <span class="badge badge-light">{{total_infected}}</span>
-      </button>
-       <button type="button" class="btn btn-danger">
-        Infected <span class="badge badge-light">{{total_deaths}}</span>
-      </button>
-       <button type="button" class="btn btn-success">
-      Infected <span class="badge badge-light">{{total_recovered}}</span>
-    </button>
-     <button type="button" class="btn btn-info">
-      Infected <span class="badge badge-light">{{total_active}}</span>
-    </button> -->
-      <!-- </span> -->
+        <div class="d-flex justify-content-center " style="margin-left:2rem">
+          <a href= "{{url_for('reload')}}" class="btn btn-warning" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Reload data...
+          </a>
+        </div>
+      
+       
        
     </ul>
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <a href="{{url_for('reload')}}" style="text-decoration: none">
-        <div class="d-flex justify-content-center " style="margin-left:2rem">
-         <div class="spinner-border" role="status" style="color:white">
-         
-         </div>
-         <span style="color:white;margin-left:1rem;padding-top:4px;margin-right: 5px;">
-           <h4>Reload</h4>
-         </span>
-     </div>
-      </a>
-        <a href="{{url_for('fight_corona')}}">
-          <button class="btn btn-warning">Become a hero</button>
-        </a>
-    </ul>
+  
 
 
      
