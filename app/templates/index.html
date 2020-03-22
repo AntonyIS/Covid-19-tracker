@@ -3,69 +3,30 @@
 {% block title %}{{title}} {%endblock title %}
 
 {% block body %}
-<section id="section-top" style="margin-bottom: 10px">
-	<div class="container-fluid">
-		<div class="container-fluid">
-			<div class="container">
-				<div class="">
-					<h3>World stats</h3>
-				</div>
-				<div class="row" >
-					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
-						<div class="card shadow-lg p-3 mb-5 bg-white rounded" >
-							<div class="card-body">
-								<h2>Infected</h2>
-								<h3>
-									<span class="badge badge-warning">{{total_infected}}</span>
-								</h3>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
-						<div class="card shadow-lg p-3 mb-5 bg-white rounded">
-							<div class="card-body">
-								<h2>Deaths</h2>
-								<h3>
-									<span class="badge badge-danger">{{total_deaths}}</span>
-								</h3>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
-						<div class="card shadow-lg p-3 mb-5 bg-white rounded">
-							<div class="card-body">
-								<h2>Recovered</h2>
-								<h3>
-									<span class="badge badge-success">{{total_recovered}}</span>
-									</h3>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
-						<div class="card shadow-lg p-3 mb-5 bg-white rounded">
-							<div class="card-body">
-								<h2>Active</h2>
-								<h3>
-									<span class="badge badge-info">{{total_active}}</span>
-								</h3>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
-						<div class="card shadow-lg p-3 mb-5 bg-white rounded">
-							<div class="card-body">
-								<h2>Countries</h2>
-								<h3>
-									<span class="badge badge-info">{{num_countries}}</span>
-								</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+<header style="margin-bottom: 10px;">
+	<div class="overlay"></div>
+	<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+	  <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+	</video>
+	<div class="container h-100">
+	  <div class="d-flex h-100 text-center align-items-center">
+		<div class="w-100 text-white">
+		  <h1 class="display-3">Beat Corona Virus</h1>
+		  <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p>
+		  <h3>
+			Infected <span class="badge badge-warning display-3">{{total_infected}}</span>
+			Deaths<span class="badge badge-danger display-3"> {{total_infected}}</span>
+			Recovered<span class="badge badge-success display-3"> {{total_recovered}}</span>
+			Countries Affected <span class="badge badge-primary display-3"> {{ total_active}}</span>
+			
+		</h3>
+		<h2>
+			Countries Affected <span class="badge badge-primary display-3"> {{ num_countries}}</span>
+		</h2>
 		</div>
+	  </div>
 	</div>
-</section>
+  </header>
 
 
 <div class="container-fluid">
