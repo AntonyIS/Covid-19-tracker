@@ -8,7 +8,7 @@ class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'fightcorona'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-    ENV='dev'
+    ENV='prod'
 
     if ENV == 'dev':
         debug = True
