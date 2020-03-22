@@ -1,10 +1,13 @@
-from flask import Flask, render_template, url_for, redirect
-from app import app
+from app import *
 from app.src import l
-from app import db
+
 
 from app.models import Country
-from db_manager import DbManager
+from flask import Flask, render_template, url_for, redirect
+
+
+from config import Config
+
 
 
 @app.route('/')
