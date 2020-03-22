@@ -71,18 +71,18 @@
 <div class="container-fluid">
 	<div class="row"  id="index-card">
 		{% if countries %}
-			{% for data in countries %}
+			{% for country in countries %}
 		<div class="col-sm-12 col-md-2 col-lg-2 col-xl-2">
-			<a href="{{url_for('country_detail', name=data.name)}}" style="text-decoration: none">
+			<a href="{{url_for('country_detail', name=country.name)}}" style="text-decoration: none">
 				<div class='' style="margin-right: ;">
 					<div class="card shadow-lg p-3 mb-5 bg-white rounded" style="height: 15rem;" >
 						<div class="card-body" style="text-align: center;">
-							<h3 class="card-title" style="margin:1px;padding:1px;">{{data.name}}</h3>
+							<h3 class="card-title" style="margin:1px;padding:1px;">{{country.name}}</h3>
 							<hr>
 						</div>
 						<ul class="list-group list-group-flush">
-							<li class="list-group-item">Infected<span class="badge badge-warning"  style="margin-right: 5px">{{data.infected}}</span>Death<span class="badge badge-danger">{{data.deaths}}</span></li>
-							<li class="list-group-item">Recovered<span class="badge badge-success"  style="margin-right: 5px">{{data.recovered}}</span>Active<span class="badge badge-info">{{data.active}}</li>
+							<li class="list-group-item">Infected<span class="badge badge-warning"  style="margin-right: 5px">{{country.infected}}</span>Death<span class="badge badge-danger">{{country.deaths}}</span></li>
+							<li class="list-group-item">Recovered<span class="badge badge-success"  style="margin-right: 5px">{{country.recovered}}</span>Active<span class="badge badge-info">{{country.active}}</li>
 						</ul>
 					</div>
 				</div>

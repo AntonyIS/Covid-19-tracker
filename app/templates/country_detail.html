@@ -3,57 +3,60 @@
 {% block title %}{{title}} {%endblock title %}
 
 {% block body %}
-<section id="section-detail">
+<section id="section-top" style="margin-bottom: 10px; margin-top: 55px;">
 	<div class="container-fluid">
-		<div class="container">
-			<div class="jumbotron">
-				<h3>{{country.name}}</h3>
-			</div>
-			<div class="row" >
-				<div class="col-3">
-					<div class="card shadow-lg p-3 mb-5 bg-white rounded" >
-						<div class="card-body">
-							<h2>Infected</h2>
-							<h3>
-								<span class="badge badge-warning">{{country.infected}}</span>
-							</h3>
-						</div>
-					</div>
-				</div>
-				<div class="col-3">
-					<div class="card shadow-lg p-3 mb-5 bg-white rounded">
-						<div class="card-body">
-							<h2>Deaths</h2>
-							<h3>
-								<span class="badge badge-danger">{{country.deaths}}</span>
-							</h3>
-						</div>
-					</div>
-				</div>
-				<div class="col-3">
-					<div class="card shadow-lg p-3 mb-5 bg-white rounded">
-						<div class="card-body">
-							<h2>Recovered</h2>
-							<h3>
-								<span class="badge badge-success">{{country.recovered}}</span>
+		<div>
+			<div class="container" >
+				<h3 class="card-text  shadow-lg p-3 mb-5 bg-white rounded" style="text-align: center;">{{country.name}}</h3>
+				<div class="row" >
+					
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+						<div class="card shadow-lg p-3 mb-5 bg-white rounded" >
+							<div class="card-body">
+								<h2>Infected</h2>
+								<h3>
+									<span class="badge badge-warning">{{country.infected}}</span>
 								</h3>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-3">
-					<div class="card shadow-lg p-3 mb-5 bg-white rounded">
-						<div class="card-body">
-							<h2>Active</h2>
-							<h3>
-								<span class="badge badge-info">{{country.active}}</span>
-							</h3>
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+						<div class="card shadow-lg p-3 mb-5 bg-white rounded">
+							<div class="card-body">
+								<h2>Deaths</h2>
+								<h3>
+									<span class="badge badge-danger">{{country.deaths}}</span>
+								</h3>
+							</div>
 						</div>
 					</div>
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+						<div class="card shadow-lg p-3 mb-5 bg-white rounded">
+							<div class="card-body">
+								<h2>Recovered</h2>
+								<h3>
+									<span class="badge badge-success">{{country.recovered}}</span>
+									</h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+						<div class="card shadow-lg p-3 mb-5 bg-white rounded">
+							<div class="card-body">
+								<h2>Active</h2>
+								<h3>
+									<span class="badge badge-info">{{country.active}}</span>
+								</h3>
+							</div>
+						</div>
+					</div>
+					
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
+
 
 <section id="info">
 	<div class="container">

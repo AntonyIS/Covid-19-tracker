@@ -29,18 +29,21 @@ def index():
 
 @app.route('/country/<name>')
 def country_detail(name):
+
 	countries = Country.query.all()
 	country = Country.query.filter_by(name=name).first()
+	print("COUNTRY", country.name)
 	total_infected = 0
 	total_deaths = 0
 	total_recovered= 0
 	total_active = 0
-	for country in countries:
-		total_infected += country.infected
-		total_deaths += country.deaths
-		total_recovered += country.recovered
-		total_active += country.active
-	return render_template("country_detail.html", country=country,total_infected=total_infected,total_deaths=total_deaths,total_recovered=total_recovered,total_active=total_active, num_countries= len(countries), countries=countries, title="Covid 19 | {}".format(country.name))
+
+	for nchi in countries:
+		total_infected += nchi.infected
+		total_deaths += nchi.deaths
+		total_recovered += nchi.recovered
+		total_active += nchi.active
+	return render_template("country_detail.html", country=country,total_infected=total_infected,total_deaths=total_deaths,total_recovered=total_recovered,total_active=total_active, num_countries= len(countries), countries=countries, title="Covid 19 | {}".format(name))
 
 
 @app.route('/fight corona')
